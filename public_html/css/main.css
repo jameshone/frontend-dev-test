@@ -1,0 +1,488 @@
+
+/*
+	Fonts
+*/
+
+@font-face {
+	font-family: 'GeorgiaItalic';
+	src: url('../fonts/GeorgiaItalic.eot');
+	src: url('../fonts/GeorgiaItalic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GeorgiaItalic.woff2') format('woff2'),
+		url('../fonts/GeorgiaItalic.woff') format('woff'),
+		url('../fonts/GeorgiaItalic.ttf') format('truetype'),
+		url('../fonts/GeorgiaItalic.svg#GeorgiaItalic') format('svg');
+}
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../fonts/Roboto.eot');
+	src: url('../fonts/Roboto.eot') format('embedded-opentype'),
+		url('../fonts/Roboto.woff2') format('woff2'),
+		url('../fonts/Roboto.woff') format('woff'),
+		url('../fonts/Roboto.ttf') format('truetype'),
+		url('../fonts/Roboto.svg#Roboto') format('svg');
+}
+
+@font-face {
+	font-family: 'RobotoLight';
+	src: url('../fonts/RobotoLight.eot');
+	src: url('../fonts/RobotoLight.eot') format('embedded-opentype'),
+		url('../fonts/RobotoLight.woff2') format('woff2'),
+		url('../fonts/RobotoLight.woff') format('woff'),
+		url('../fonts/RobotoLight.ttf') format('truetype'),
+		url('../fonts/RobotoLight.svg#RobotoLight') format('svg');
+}
+
+@font-face {
+	font-family: 'RobotoMedium';
+	src: url('../fonts/RobotoMedium.eot');
+	src: url('../fonts/RobotoMedium.eot') format('embedded-opentype'),
+		url('../fonts/RobotoMedium.woff2') format('woff2'),
+		url('../fonts/RobotoMedium.woff') format('woff'),
+		url('../fonts/RobotoMedium.ttf') format('truetype'),
+		url('../fonts/RobotoMedium.svg#RobotoMedium') format('svg');
+}
+
+/*
+	General Styles
+*/
+
+body {
+	color: #ebefef;
+	font-family: "RobotoLight";
+	font-size: 12px;
+	background: url('../img/page-background.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/* Normalize the top & bottom margins */
+h1,
+h2,
+h3,
+h4 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+h3 {
+	color: #97abbb;
+	font-family: "RobotoMedium";
+}
+
+button {
+	border: 1px solid #97acbb;
+	background: transparent;
+	color: #97abbb;
+	font-family: "Roboto";
+	font-size: 12px;
+	width: 100%;
+	height: 39px;
+	-webkit-transition: all 1s ease-out;
+	-moz-transition: all 1s ease-out;
+	-o-transition: all 1s ease-out;
+	transition: all 1s ease-out;
+}
+
+button:hover,
+button:active,
+button:focus {
+	background-color: #97abbb;
+	color:#fff;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 920px;
+}
+
+.your-month {
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.status h3 {
+	font-family: "Roboto";
+}
+
+.status p {
+    font-family: "RobotoLight";
+    font-size: 28px;
+    padding-top: 8px;
+}
+
+.status p.completed {
+	color: #96edb7;
+}
+
+.status p.outstanding {
+	color: #4690b8;
+}
+
+/* 320px screens */
+@media screen and (min-width: 320px) {
+
+	header {
+		border-bottom: 2px solid #97abbb;
+		padding-bottom: 8px;
+	}
+
+	img.logo {
+		width: 48px;
+		height: 32px;
+	}
+
+	.header-padding-top {
+		padding-top: 36px;
+	}
+
+	.header-padding-bottom {
+		padding-bottom: 4px;
+	}
+
+	h3 {
+		font-size: 17px;
+		line-height: 0.9;
+	}
+
+	.user-name {
+		font-size: 30px;
+		line-height: 2;
+	}
+
+	.time {
+		font-size: 50px;
+		line-height: 1.4;
+		margin-left: -4px;
+	}
+
+	.event-item {
+		padding-top: 11px;
+	}
+	
+	.event-item h3 {
+		font-family: "RobotoLight";
+		line-height: 1.2;
+	}
+
+	.event-item p.detail {
+		padding-top: 13px;
+		margin-bottom: 0;
+		line-height: 1.2;
+	}
+
+	.event-time {
+		font-family: "GeorgiaItalic";
+		font-size: 15px;
+		line-height: 1;
+		border-bottom: 3px solid #95edb7;
+		width: 38px;
+		padding-bottom: 12px;
+	}
+
+	.button-padding-top {
+		padding-top: 13px;
+	}
+
+	.button-padding-bottom {
+		padding-bottom: 13px;
+	}
+
+	.months {
+		display: block;
+		list-style: none;
+		position: relative;
+		width: 1000px;
+		left: -334px; /* Just for demo purposes */
+	}
+
+	.months-padding-top {
+		padding-top: 11px;
+	}
+
+	.months-padding-bottom {
+		padding-bottom: 13px;
+	}
+
+	.months li {
+		opacity: .5;
+		color: #ebefef;
+		font-family: "RobotoMedium";
+		font-size: 16px;
+		float: left;
+		text-transform: uppercase;
+		padding: 0px 16px 0 0;
+	}
+
+	.months li.active {
+		font-size: 24px;
+		border-bottom: 3px solid #95edb7;
+		top: -6px;
+		position: relative;
+		padding: 0;
+		margin: 0px 10px 0 10px;
+		width: 40px;
+	}
+
+	.task-header h3 {
+		color: #ebefef;
+		font-family: "RobotoLight";
+		line-height: 1.6;
+		font-size: 17px;
+	}
+
+	.task-header p {
+		padding-top: 9px;
+		padding-bottom: 8px;
+		line-height: 1.2;
+	}
+
+	.task-header-outstanding:before,
+	.task-header-completed:before {
+		font-size: 38px;
+		content: "\2022";
+		position: absolute;
+		float: left;
+		top: -13px;
+		left: 1px;
+	}
+
+	.task-header-outstanding:before {
+		color: #468fb8;
+	}
+
+	.task-header-completed:before {
+		color: #95edb7;
+	}
+
+	.summary {
+		padding-top: 22px;
+	}
+
+	.summary h3 {
+		color: #97abbb;
+		font-family: "RobotoLight";
+		font-size: 17px;
+		padding-bottom: 8px;
+	}
+
+	.summary p.completed,
+	.summary p.outstanding	{
+		font-family: "RobotoLight";
+		font-size: 30px;
+	}
+
+	.summary p.outstanding	{
+		color: #95edb7;
+	}
+
+	.summary p.completed {
+		color: #468fb8;
+	}
+
+	.status {
+		padding-top: 22px;
+	}
+
+}
+
+@media screen and (min-width: 768px) {
+
+	header {
+		border-bottom: 3px solid #97abbb;
+		padding-bottom: 17px;
+	}
+
+	img.logo {
+		width: 61px;
+		height: 41px;
+		float: right;
+		top: 81px;
+		position: relative;
+	}
+
+	.header-padding-top {
+		padding-top: 24px;
+	}
+
+	.header-padding-bottom {
+		padding-bottom: 4px;
+	}
+
+	h3 {
+		font-size: 21px;
+		line-height: 0.9;
+	}
+
+	.user-name {
+		font-size: 37px;
+		line-height: 1.9;
+	}
+
+	.your-day h3 {
+		padding-top: 58px;
+	}
+
+	.time {
+		font-size: 90px;
+		line-height: 1.2;
+		margin-left: -12px;
+	}
+
+	.right-margin {
+		border-right: 6px solid #91edbb;
+		height: 105px;
+		top: 81px;
+		left: -15px;
+	}
+	
+	.events-header {
+		padding-top: 9px;
+	}
+
+	.event-item {
+		padding-top: 11px;
+	}
+	
+	.event-item h3 {
+		font-family: "RobotoLight";
+		line-height: 1.2;
+	}
+
+	.event-item p.detail {
+		padding-top: 14px;
+		margin-bottom: 0;
+		line-height: 1.2;
+		font-size: 14px;
+	}
+
+	.event-time {
+		font-family: "GeorgiaItalic";
+		font-size: 19px;
+		line-height: 1;
+		border-bottom: 3px solid #95edb7;
+		width: 55px;
+		padding-bottom: 18px;
+		margin-bottom: -31px;
+	}
+
+	button {
+		font-size: 14px;
+		width: 21%;
+		height: 39px;
+	}
+
+	.button-padding-top {
+		padding-top: 29px;
+	}
+
+	.button-padding-bottom {
+		padding-bottom: 13px;
+	}
+
+	.your-month h3 {
+		padding-top: 52px;
+	}
+
+	.months {
+		display: block;
+		list-style: none;
+		position: relative;
+		width: 1000px;
+		left: -332px; /* Just for demo purposes */
+	}
+
+	.months-padding-top {
+		padding-top: 15px;
+	}
+
+	.months-padding-bottom {
+		padding-bottom: 13px;
+	}
+
+	.months li {
+		opacity: .5;
+		color: #ebefef;
+		font-family: "RobotoMedium";
+		font-size: 16px;
+		float: left;
+		text-transform: uppercase;
+		padding: 0px 17px 0 0;
+	}
+
+	.months li.active {
+		font-size: 24px;
+		border-bottom: 3px solid #95edb7;
+		top: -6px;
+		position: relative;
+		padding-bottom: 8px;
+		margin: 0px 2px 0 2px;
+		width: 55px;
+	}
+
+	.task-header h3 {
+		color: #ebefef;
+		font-family: "RobotoLight";
+		line-height: 1.6;
+		font-size: 21px;
+		padding-top: 4px;
+	}
+
+	.task-header p {
+		padding-top: 9px;
+		padding-bottom: 13px;
+		line-height: 1.2;
+		font-size: 13px;
+	}
+
+	.task-button button {
+		width: 31%;
+	}
+
+	.task-button {
+		padding-top: 9px;
+	}
+
+	.task-header-outstanding:before,
+	.task-header-completed:before {
+		font-size: 38px;
+		content: "\2022";
+		position: absolute;
+		float: left;
+		top: -8px;
+		left: -3px;
+	}
+
+	.task-header-outstanding:before {
+		color: #468fb8;
+	}
+
+	.task-header-completed:before {
+		color: #95edb7;
+	}
+
+	.status h3,
+	.status p {
+		padding: 0;
+		text-align: right;
+	}
+	
+	.status p {
+		font-size: 37px;
+		line-height: 2;
+	}
+
+	.status {
+		float: right;
+		display: block;
+		position: relative;
+		top: -350px;
+		width: 100%;
+		margin-bottom: -20px;
+	}
+
+}
